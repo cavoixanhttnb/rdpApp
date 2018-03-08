@@ -20,8 +20,11 @@ namespace Demo
         public Menu()
         {
             InitializeComponent();
-            MasterPage.Title = "zxcxzc";
+            Icon = (FileImageSource)ImageSource.FromFile("logo.png");
+            MasterPage.Title = "RedDotPower";
+            //MasterPage.Icon = "logo.png";
             MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            Detail = new NavigationPage(new Views.RedDot_Landing());
         }
 
         /// <summary>

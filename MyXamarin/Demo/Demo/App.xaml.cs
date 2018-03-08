@@ -51,7 +51,7 @@ namespace Demo
 
             if (string.IsNullOrEmpty(Settings.AccessToken))
             {
-                MainPage = new NavigationPage(new Login());
+                MainPage =  new NavigationPage(new RedDot_Landing());// new Menu();// new NavigationPage(new Menu());
             }
             else
             {

@@ -2,8 +2,13 @@
 <MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
                   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                   x:Class="Demo.Menu"
-                  xmlns:pages="clr-namespace:Demo">
-    <MasterDetailPage.Master HorizontalAlignment="Right" Order="Primary" Priority="1">
+                  xmlns:pages="clr-namespace:Demo"
+                  MasterBehavior="Popover">
+    <!--<ContentPage.ToolbarItems >
+        <ToolbarItem Name="MenuItem1" Order="Primary" Icon="logo.png" Text="" Priority="1" />
+    </ContentPage.ToolbarItems>-->
+    
+    <MasterDetailPage.Master HorizontalAlignment="Left" Order="Primary" Priority="1">
         <pages:MenuMaster x:Name="MasterPage"/>
     </MasterDetailPage.Master>
     <MasterDetailPage.Detail>

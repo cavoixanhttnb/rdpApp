@@ -1,26 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Demo.Views.RedDot_Register">
+              x:Class="Demo.Views.RedDot_Register"
+              NavigationPage.HasBackButton="False">
+    <!--<Label>
+        <Label.FontSize>
+            
+        </Label.FontSize>
+    </Label>-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="For Residential"
+            Priority="0" Order="Secondary" Clicked="ForResidential_Clicked" />
+        <ToolbarItem Text ="For Business"
+          Priority="1" Order="Secondary" Clicked="ForBusiness_Clicked" />
+        <ToolbarItem Text ="Login"
+          Priority="2" Order="Secondary" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage>
+        <!--<ContentPage.BindingContext>
+            <vm:RegisterVM />
+        </ContentPage.BindingContext>-->
         <ContentPage.Content>
-            <Grid BackgroundColor="White">
+            <ScrollView>
+                <Grid BackgroundColor="White">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="5"/>
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="1" Margin="20,0,20,0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="68"/>
-                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="8"/>
                         <RowDefinition Height="120"/>
                         <RowDefinition Height="40"/>
                         <RowDefinition Height="40"/>
-                        <RowDefinition Height="40"/>
-                        <RowDefinition Height="40"/>
-                        <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
-                    <Label Grid.Row="0" Text="Registration" Font="Bold,50" />
+                    <Label Grid.Row="0" Text="Registration" Font="Bold,35" />
                     <Label Grid.Row="1" BackgroundColor="#bababa"
                            HeightRequest="1"
                            HorizontalOptions="Fill"
@@ -65,29 +83,30 @@
                        Text="{Binding UserName}"
                        Placeholder="NAME"
                        PlaceholderColor="#bababa"
-                       FontSize="16"/>
+                       FontSize="14"/>
                     <Entry Grid.Row="7"
                        x:Name="txtEmail"
                        Text="{Binding Email}"
                        Placeholder="EMAIL"
                        PlaceholderColor="#bababa"
-                       FontSize="16"/>
+                       FontSize="14"/>
                     <Entry Grid.Row="8"
                        x:Name="txtPassword"
                        Text="{Binding Email}"
                        Placeholder="PASSWORD"
                        IsPassword="True"
                        PlaceholderColor="#bababa"
-                       FontSize="16"/>
+                       FontSize="14"/>
                     <Button Grid.Row="9"
                         Text="Create Account"
                         TextColor="White"
                         BackgroundColor="#1F9CDF"
                         HeightRequest="50"
                         VerticalOptions="Start"
-                        Command="{Binding CreateAccount}"/>
+                        Command="{Binding RegisterCommand}" />
                 </Grid>
             </Grid>
+                </ScrollView>
         </ContentPage.Content>
     </ContentPage>
 
@@ -100,30 +119,30 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="1" Margin="20,0,20,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="68"/>
-                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="8"/>
                             <RowDefinition Height="120"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
+                            <RowDefinition Height="35"/>
                             <RowDefinition Height="40"/>
+                            <RowDefinition Height="35"/>
                             <RowDefinition Height="40"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
                             <RowDefinition Height="40"/>
+                            <RowDefinition Height="35"/>
                             <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
-                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="35"/>
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="Registration" Font="Bold,50" />
+                        <Label Grid.Row="0" Text="Registration" Font="Bold,35" />
                         <Label Grid.Row="1" BackgroundColor="#bababa"
                            HeightRequest="1"
                            HorizontalOptions="Fill"
                            VerticalOptions="Center"/>
                         <Image Grid.Row="2" Source="Step2.png" HorizontalOptions="CenterAndExpand"/>
-                        <Label Grid.Row="3" Text="Basic Information" Font="Bold, 24" />
+                        <Label Grid.Row="3" Text="Basic Information" Font="Bold, 20" />
                         <Label Grid.Row="4" Text="Company Information" />
                         <Label Grid.Row="5" Text="Name *" />
                         <Entry Grid.Row="6" x:Name="txtNameBasic" />
@@ -131,7 +150,7 @@
                         <Entry Grid.Row="8" x:Name="txtSegmentBasic" />
                         <Label Grid.Row="9" Text="Director / owner name" />
                         <Label Grid.Row="10" Text="Salutation *" />
-                        <Picker Grid.Row="11" x:Name="picSalutationBasic" SelectedIndexChanged="picSalutationBasic_SelectedIndexChanged" />
+                        <Picker Grid.Row="11" Title="Please select" x:Name="picSalutationBasic" SelectedIndexChanged="picSalutationBasic_SelectedIndexChanged" />
                         <Label Grid.Row="12" Text="First Name *" />
                         <Entry Grid.Row="13" x:Name="txtFirstNameBasic" />
                         <Label Grid.Row="14" Text="Last Name *" />
@@ -151,8 +170,8 @@
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="1" Margin="20,0,20,0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="68"/>
-                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="8"/>
                             <RowDefinition Height="120"/>
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
@@ -168,18 +187,31 @@
                             <RowDefinition Height="40"/>
                             <RowDefinition Height="40"/>
                         </Grid.RowDefinitions>
-                        <Label Grid.Row="0" Text="Registration" Font="Bold,50" />
+                        <Label Grid.Row="0" Text="Registration" Font="Bold,35" />
                         <Label Grid.Row="1" BackgroundColor="#bababa"
                            HeightRequest="1"
                            HorizontalOptions="Fill"
                            VerticalOptions="Center"/>
                         <Image Grid.Row="2" Source="Step3.png" HorizontalOptions="CenterAndExpand"/>
-                        <Label Grid.Row="3" Text="Plan &amp; Supporting Document" Font="Bold, 24" />
+                        <Label Grid.Row="3" Text="Plan &amp; Supporting Document" Font="Bold, 20" />
                         <Label Grid.Row="4" Text="Plan Information" />
                         <Label Grid.Row="5" Text="Plan *" />
-                        <Entry Grid.Row="6" x:Name="txtPlan" />
+                        <Picker Grid.Row="6" VerticalOptions="CenterAndExpand" Title="Please select" >
+                            <Picker.Items>
+                                <x:String>eSAVE</x:String>
+                                <x:String>eFIX</x:String>
+                                <x:String>eQ</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <!--<Entry Grid.Row="6" x:Name="txtPlan" />-->
                         <Label Grid.Row="7" Text="Duration" />
-                        <Entry Grid.Row="8" x:Name="txtDuration" />
+                        <Picker Grid.Row="8" VerticalOptions="CenterAndExpand" Title="Please select" >
+                            <Picker.Items>
+                                <x:String>6 months</x:String>
+                                <x:String>12 months</x:String>
+                            </Picker.Items>
+                        </Picker>
+                        <!--<Entry Grid.Row="8" x:Name="txtDuration" />-->
                         <Label Grid.Row="9" Text="% Discount" />
                         <Label Grid.Row="10" x:Name="txtDiscount" />
                         <Label Grid.Row="11" Text="Past 3 months usage &amp; supporting documents" />

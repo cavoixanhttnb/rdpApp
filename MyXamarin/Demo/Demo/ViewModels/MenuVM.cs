@@ -23,10 +23,10 @@ namespace Demo.ViewModels
             var m = new MenuModel { Id = 0, Title = "Profile", Icon = "Profile.png" };
             Models.Add(m);
 
-            m = new MenuModel { Id = 0, Title = "Register_RedDot", TargetType = typeof(RedDot_Register) };
+            m = new MenuModel { Id = 0, Title = "Register", TargetType = typeof(RedDot_Register) };
             Models.Add(m);
 
-            m = new MenuModel { Id = 0, Title = "Landing_RedDot", TargetType = typeof(RedDot_Landing) };
+            m = new MenuModel { Id = 0, Title = "Landing", TargetType = typeof(RedDot_Landing) };
             Models.Add(m);
 
             m = new MenuModel { Id = 0, Title = "List objects", Icon = "ListObject.png", TargetType = typeof(ListObjects) };

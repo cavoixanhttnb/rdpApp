@@ -3,7 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:Demo.ViewModels"
              xmlns:ctr="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
-             x:Class="Demo.Views.Login">
+             x:Class="Demo.Views.Login"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="For Residential"
+            Priority="0" Order="Secondary" Clicked="ForResidential_Clicked" />
+        <ToolbarItem Text ="For Business"
+          Priority="1" Order="Secondary" Clicked="ForBusiness_Clicked" />
+        <ToolbarItem Text ="Login"
+          Priority="2" Order="Secondary" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <vm:LoginVM/>
     </ContentPage.BindingContext>

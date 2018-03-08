@@ -15,6 +15,24 @@ namespace Demo.Views
 		public RedDot_Landing ()
 		{
 			InitializeComponent ();
-		}
-	}
+        }
+
+        private void ForResidential_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new RedDot_Register());
+        }
+        private void ForBusiness_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new RedDot_Landing());
+        }
+        private void Login_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new Login());
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new RedDot_Register());
+        }
+    }
 }

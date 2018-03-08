@@ -6,6 +6,7 @@
       <item name="android:windowNoTitle">true</item>
       <item name="android:windowFullscreen">true</item>
       <item name="android:windowAnimationStyle">@null</item>
+      <!--<item name="android:background">@drawable/logo</item>-->
   </style>
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -14,8 +15,8 @@
     <!--We will be using the toolbar so no need to show ActionBar-->
     <item name="windowActionBar">false</item>
     <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette -->
-    <!-- colorPrimary is used for the default action bar background -->
-    <item name="colorPrimary">#2196F3</item>
+    <!-- colorPrimary is used for the default action bar background 2196F3-->
+    <item name="colorPrimary">#dddddd</item>
     <!-- colorPrimaryDark is used for the status bar -->
     <item name="colorPrimaryDark">#1976D2</item>
     <!-- colorAccent is used as the default value for colorControlActivated
@@ -30,5 +31,9 @@
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>
+  </style>
+  <style name="AppToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:colorBackground">#ffffff</item>
+    <item name="android:textColor">#dddddd</item>
   </style>
 </resources>

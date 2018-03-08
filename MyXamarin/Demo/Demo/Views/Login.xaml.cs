@@ -73,5 +73,18 @@ namespace Demo.Views
         {
             await Navigation.PushAsync(new GoogleProfile());
         }
+
+        private void ForResidential_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new RedDot_Register());
+        }
+        private void ForBusiness_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new RedDot_Landing());
+        }
+        private void Login_Clicked(object sender, EventArgs e)
+        {
+            this.Navigation.PushAsync(new Login());
+        }
     }
 }

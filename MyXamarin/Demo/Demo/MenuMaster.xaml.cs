@@ -22,6 +22,7 @@ namespace Demo
         {
             InitializeComponent();
             BindingContext = new MenuVM();
+            //NavigationPage.SetTitleIcon(this, "logo.png");
             ListView = MenuItemsListView;
         }
 
@@ -39,7 +40,7 @@ namespace Demo
             Settings.User = "";
             Settings.Password = "";
 
-            Application.Current.MainPage = new NavigationPage(new Login());
+            Application.Current.MainPage = new NavigationPage(new Menu()) { BarTextColor = Color.FromHex("#8e959e") };
         }
     }
 }

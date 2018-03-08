@@ -1,16 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Demo.Views.RedDot_Landing">
+             x:Class="Demo.Views.RedDot_Landing"
+             Padding="0,0,0,0"
+             NavigationPage.HasBackButton="False">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text ="For Residential"
+            Priority="0" Order="Secondary" Clicked="ForResidential_Clicked" />
+        <ToolbarItem Text ="For Business"
+          Priority="1" Order="Secondary" Clicked="ForBusiness_Clicked" />
+        <ToolbarItem Text ="Login"
+          Priority="2" Order="Secondary" Clicked="Login_Clicked" />
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <ScrollView>
-            <Grid BackgroundColor="White">
+            <Grid BackgroundColor="White" >
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="0"/>
                 </Grid.RowDefinitions>
-                <Grid Grid.Row="1" Margin="10,0,10,0">
+                <Grid Grid.Row="1" Margin="0,0,0,0">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="230"/>
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="40"/>
@@ -24,61 +35,46 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-                    <Image Grid.Row="0" Source="RedDotPower.png" HeightRequest="50" WidthRequest="100"/>
-                    <Label Grid.Row="1" TextColor="#1D99E5" Text="Retail Electricity" Font="Bold,40"
+                    <Image Grid.Row="0" Source="Singapore_River_8085095794.jpg" HorizontalOptions="StartAndExpand" Aspect="Fill"  HeightRequest="230" Margin="0,-10,0,0" />
+                    <Label Grid.Row="1" TextColor="#1D99E5" Text="Retail Electricity" Font="Bold,35" Margin="0, 10,0,0"
                            HorizontalOptions="Center"
                            VerticalOptions="Center"/>
-                    <Label Grid.Row="2" Margin="20,0,20,0" HorizontalTextAlignment="Center" 
-                           Text="Cuộc gặp gỡ của quan chức Mỹ - Nhật - Ấn - Australia bên lề hội nghị ASEAN ở Philippines, dù chỉ ở cấp quan chức, ngay lập tức đã kéo theo phản ứng từ Trung Quốc và làm sống lại một ý tưởng tưởng đã chết yểu 10 năm trước: Tứ giác Kim cương. Tổng thống Mỹ Donald Trump, trong bài phát biểu tại Việt Nam, cũng đã nhấn mạnh tầm quan trọng của một Ấn Độ - Thái Bình Dương tự do và mở, khu vực được kết nối với nhau bởi 4 trọng tâm chính là Tứ giác Kim cương " />
-                    <Button Grid.Row="3" HorizontalOptions="Center" Text="Help me recommend" TextColor="White" BackgroundColor="#1D99E5"></Button>
-                    <Button Grid.Row="4" HorizontalOptions="Center" Text="Find out how much you can save" TextColor="White" BackgroundColor="#1D99E5"></Button>
-                    <Frame Grid.Row="5" BackgroundColor="#5C5C5C" HorizontalOptions="FillAndExpand" HeightRequest="80">
+                    <Label Grid.Row="2" Margin="10, 15,10,0" HorizontalTextAlignment="Center" FontFamily="Helvetica Neue,Helvetica,Arial,sans-serif" 
+                           Text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut et dolore magna aliqua. Ut enim ad minim veniam" />
+                    <Button Grid.Row="3" HorizontalOptions="Center" Text="Help me recommend" TextColor="White" BackgroundColor="#1f9cde"></Button>
+                    <Button Grid.Row="4" HorizontalOptions="Center" Text="Find out how much you can save" TextColor="White" BackgroundColor="#1f9cde"></Button>
+                    <Frame Grid.Row="5" BackgroundColor="#5C5C5C" HorizontalOptions="FillAndExpand" HeightRequest="50">
                         <Label Text="eSAVE" TextColor="White" FontSize="40" HorizontalOptions="Center"/>
                     </Frame>
-                    <Grid Grid.Row="6" Margin="10,0,0,0"  BackgroundColor="#DFDFDF">
+                    <Grid Grid.Row="6" Margin="0,0,0,0" RowSpacing="1"  BackgroundColor="#DFDFDF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
-                        <Frame Grid.Row="0" HorizontalOptions="FillAndExpand" HeightRequest="25">
-                            <Label Text="20% Discount" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"/>
+                        <Frame Grid.Row="0" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Frame Padding="5,0,5,0" BackgroundColor="#EC0C26">
+                                <Label Text="Save $1,218.00 annually (20%) *" TextColor="White" Font="Bold,15" HorizontalOptions="CenterAndExpand" />
+                            </Frame>
                         </Frame>
-                        <Frame Grid.Row="1" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand">
-                        <Label Text="eSAVE is a discount of the regulated tariff, as the regulated tariff changes eSAVE retains the same discount to the tariff throughout the contract length" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                        <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label Grid.Row="1"  Text="20% Discount" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"/>
                         </Frame>
-                        <BoxView Grid.Row="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="40">
+                        <Frame Grid.Row="2" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                            <Label FontFamily="Helvetica Neue,Helvetica,Arial,sans-serif" Text="eSAVE is a discount of the regulated tariff, as the regulated tariff changes eSAVE retains the same discount to the tariff throughout the contract length" HorizontalOptions="Center"/>
+                        </Frame>
+                        <BoxView Grid.Row="3" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
                         </BoxView>
-                        <Button Grid.Row="2" Text="Register" Margin="0,15,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#5C5C5C" />
+                        <Button Grid.Row="4" Text="Register" Margin="0,-25,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#5C5C5C" Clicked="Button_Clicked" />
                     </Grid>
 
-                    <Frame Grid.Row="7" Margin="0,10,0,0" BackgroundColor="#5C5C5C" HorizontalOptions="FillAndExpand" HeightRequest="80">
+                    <Frame Grid.Row="7" Margin="0,10,0,0" BackgroundColor="#5C5C5C" HorizontalOptions="FillAndExpand" HeightRequest="50">
                         <Label Text="eFIX" TextColor="White" FontSize="40" HorizontalOptions="Center"/>
                     </Frame>
 
-                    <Grid Grid.Row="8" Margin="10,0,0,0" BackgroundColor="#DFDFDF">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <Frame Grid.Row="0" HorizontalOptions="FillAndExpand" HeightRequest="25">
-                            <Label Text="0.1683 per kWh" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"/>
-                        </Frame>
-                        <Frame Grid.Row="1" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand">
-                            <Label Text="eSAVE is a discount of the regulated tariff, as the regulated tariff changes eSAVE retains the same discount to the tariff throughout the contract length" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
-                        </Frame>
-                        <BoxView Grid.Row="2" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="40">
-                        </BoxView>
-                        <Button Grid.Row="2" Text="Register" Margin="0,15,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#5C5C5C" />
-                    </Grid>
-
-                    <Frame Grid.Row="9" Margin="0,10,0,0" BackgroundColor="#EC0C26" HorizontalOptions="FillAndExpand" HeightRequest="80">
-                        <Label Text="eQ" TextColor="White" FontSize="40" HorizontalOptions="Center"/>
-                    </Frame>
-                    <Grid Grid.Row="10" Margin="10,0,0,0" BackgroundColor="#DFDFDF">
+                    <Grid Grid.Row="8" Margin="0,0,0,0" RowSpacing="0" BackgroundColor="#DFDFDF">
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="Auto"/>
@@ -88,19 +84,69 @@
                         </Grid.RowDefinitions>
                         <Frame Grid.Row="0" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand" HeightRequest="25">
                             <Frame Padding="5,0,5,0" BackgroundColor="#EC0C26">
-                                <Label Text="Save $1,365.00 (22%)" TextColor="White" Font="Bold,15" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="Save $1,041.00 annually (17%) *" TextColor="White" Font="Bold,15" HorizontalOptions="CenterAndExpand"/>
                             </Frame>
                         </Frame>
-                        <Frame Grid.Row="1" HorizontalOptions="FillAndExpand">
-                            <Label Text="0.17 per kWh (peak)" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
-                            <Label Text="0.145 per kWh (off peak)" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                        <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" HeightRequest="25" VerticalOptions="StartAndExpand">
+                            <Label Text="0.1683 per kWh" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"/>
                         </Frame>
                         <Frame Grid.Row="2" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand">
-                            <Label Text="Peak and off peak paln, customers benefit from consuming electricity in cheaper off peak hours, assumption about consumption hass to be made" TextColor="Black" FontSize="15" HorizontalOptions="CenterAndExpand"/>
+                            <Label FontFamily="Helvetica Neue,Helvetica,Arial,sans-serif" Text="eSAVE is a discount of the regulated tariff, as the regulated tariff changes eSAVE retains the same discount to the tariff throughout the contract length" HorizontalOptions="Center"/>
                         </Frame>
                         <BoxView Grid.Row="3" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="40">
                         </BoxView>
-                        <Button Grid.Row="3" Text="Register" Margin="0,15,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#EC0C26" />
+                        <Button Grid.Row="4" Text="Register" Margin="0,-25,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#5C5C5C" Clicked="Button_Clicked" />
+                    </Grid>
+                    <!--<RelativeLayout Padding="0" Grid.Row="9" BackgroundColor="#EC0C26" >
+                        <StackLayout HeightRequest="50" HorizontalOptions="FillAndExpand" x:Name="eQFrame" 
+                                     RelativeLayout.XConstraint="{ConstraintExpression Type=Constant, Constant=120}"
+                                     RelativeLayout.YConstraint="{ConstraintExpression Type=Constant, Constant=20}" 
+                                     RelativeLayout.HeightConstraint="{ConstraintExpression Type=Constant,Property=Height,Constant=20}"
+                                     RelativeLayout.WidthConstraint="{ConstraintExpression Type=Constant,Property=Width,Constant=140}">
+                            <Label Text="eQ" TextColor="White" FontSize="40" HorizontalOptions="Center"/>
+                        </StackLayout>
+                        <Image Source="ribon_one.png" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.5,Constant=40}"
+                                RelativeLayout.YConstraint= "{ConstraintExpression Type=RelativeToView,Property=Y, ElementName=eQFrame,Constant=-20}"
+                               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,Property=Height, Constant=-10}"
+                               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=0.4,Constant=30}" ></Image>
+                    </RelativeLayout>-->
+                    <Grid Grid.Row="9" Margin="0,0,0,0" ColumnSpacing="0" BackgroundColor="#EC0C26" Padding="0,0,0,0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="80" />
+                        </Grid.ColumnDefinitions>
+                        <Frame Grid.Row="0" Grid.Column="0" HasShadow="False" HorizontalOptions="FillAndExpand" BackgroundColor="#EC0C26" HeightRequest="50">
+                            <Label Text="eQ" TextColor="White" FontSize="40" HorizontalOptions="Center"/>
+                        </Frame>
+                        <Image Grid.Row="0" Grid.Column="1" Source="ribon_one.png" Margin="0,0,0,0" Aspect="Fill" />
+                    </Grid>
+
+                    <Grid Grid.Row="10" Margin="0,0,0,0" BackgroundColor="#DFDFDF" RowSpacing="0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Frame Grid.Row="0" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Frame Padding="5,0,5,0" BackgroundColor="#EC0C26">
+                                <Label Text="Save $1,365.00 (22%)" TextColor="White" Font="Bold,15" HorizontalOptions="CenterAndExpand"/>
+                            </Frame>
+                        </Frame>
+                        <Frame Grid.Row="1" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                            <Label Text="0.17 per kWh (peak)" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                            <Label Text="0.145 per kWh (off peak)" TextColor="Black" FontSize="20" HorizontalOptions="Center"/>
+                        </Frame>
+                        <Frame Grid.Row="2" BackgroundColor="#F6F6F6" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HasShadow="False">
+                            <Label FontFamily="Helvetica Neue,Helvetica,Arial,sans-serif"  Text="Peak and off peak paln, customers benefit from consuming electricity in cheaper off peak hours, assumption about consumption hass to be made" FontSize="15" HorizontalOptions="CenterAndExpand"/>
+                        </Frame>
+                        <BoxView Grid.Row="3" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" HeightRequest="40">
+                        </BoxView>
+                        <Button Grid.Row="3" Text="Register" Margin="0,10,0,0" HorizontalOptions="Center" TextColor="White" BackgroundColor="#EC0C26" Clicked="Button_Clicked" />
                     </Grid>
 
                     <StackLayout Grid.Row="11" Margin="0,30,0,0" Orientation="Horizontal" HorizontalOptions="Center">
